@@ -8,7 +8,7 @@ window.onload = _=>{
 			document.querySelector(".animation").classList.add("hide")
 			document.querySelector(".checkbox").classList.remove("active")
 			count+=1
-			if (count >= 3){
+			if (count >= 2){
 				window.location.href = "https://neal.fun/not-a-robot/"
 			}
 		}, 5000)
