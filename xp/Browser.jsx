@@ -66,7 +66,7 @@ const Browser = ({}) => {
                 <LeftMenu leftMenuHiden={leftMenuHiden} setLeftMenuHidden={setLeftMenuHidden}/>
                 <div className="flex items-center justify-center sm:min-w-96 min-h-64 sm:min-h-80">
                     <div className="flex flex-col items-start gap-3 p-2">
-                        <img className="h-12 select-none" src="a/assets/sadpaper.png" draggable={false} />
+                        <img className="h-12 select-none" src="xp/assets/sadpaper.png" draggable={false} />
                         <span>Webpage not available</span>
                         <span>ERR_CONNECTION_REFUSED</span>
                     </div>

@@ -31,7 +31,7 @@ const TaskBar = ({apps, setMinimized, setShowStartMenu}) => {
 				"
 				onClick={_=>setShowStartMenu(prev=>!prev)}
 			>
-				<img src="a/assets/logo.png" className="select-none h-full" draggable={false}/>
+				<img src="xp/assets/logo.png" className="select-none h-full" draggable={false}/>
 				Start
 			</button>
 
@@ -69,7 +69,7 @@ const TaskBar = ({apps, setMinimized, setShowStartMenu}) => {
 					text-white text-sm
 				"
 			>
-				<img src="a/assets/sound.png" className="select-none h-full pt-3 pb-2" draggable={false}/>
+				<img src="xp/assets/sound.png" className="select-none h-full pt-3 pb-2" draggable={false}/>
 				<span>{time}</span>
 			</div>
 		</div>
@@ -136,7 +136,7 @@ const StartMenu = ({runApp, appsList, setShowStartMenu, onShutDown}) => {
 				</div>
 				<div className="bg-[#d3e5fa] py-2 border-l border-[#b4d1f4]">
 					<MenuItem url="https://superzombi.github.io/music/">
-						<img src="a/assets/player.png" draggable={false}/>
+						<img src="xp/assets/player.png" draggable={false}/>
 						<span>Music</span>
 					</MenuItem>
 					<MenuItem url="repos">
@@ -149,7 +149,7 @@ const StartMenu = ({runApp, appsList, setShowStartMenu, onShutDown}) => {
 					</MenuItem>
 					<div className="my-2 border-t border-[#b4d1f4]" />
 					<MenuItem url="https://superzombi.github.io/web-os/">
-						<img src="a/assets/win-11.png" draggable={false}/>
+						<img src="xp/assets/win-11.png" draggable={false}/>
 						<span>Windows 12</span>
 					</MenuItem>
 				</div>
@@ -170,7 +170,7 @@ const StartMenu = ({runApp, appsList, setShowStartMenu, onShutDown}) => {
 					"
 					onClick={_=>onShutDown()}
 				>
-					<img className="select-none h-full ring-1 ring-[#c0cbe3] rounded-md" src="a/assets/turn-off.png" draggable={false}/>
+					<img className="select-none h-full ring-1 ring-[#c0cbe3] rounded-md" src="xp/assets/turn-off.png" draggable={false}/>
 					<span>Turn Off</span>
 				</button>
 			</div>

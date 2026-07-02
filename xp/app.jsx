@@ -52,29 +52,29 @@ const App = () => {
 	const appsList = [
 		{
 			name: "Profile",
-			icon: "a/assets/user.png",
+			icon: "xp/assets/user.png",
 			content: <Profile getPopularLanguages={getPopularLanguages}/>
 		},
 		{
 			name: "Internet Explorer",
-			icon: "a/assets/browser.png",
+			icon: "xp/assets/browser.png",
 			content: <Browser/>
 		},
 		{
 			name: "Games",
-			icon: "a/assets/game.png",
+			icon: "xp/assets/game.png",
 			content: <Games/>
 		}
 	]
 	const playSound = () => {
-		const audio = new Audio("a/assets/startup.mp3")
+		const audio = new Audio("xp/assets/startup.mp3")
 		audio.play().then(_=>{
 			setWelcomeAudioPlayed(true)
 			setTimeout(() => {
-				const err_audio = new Audio("a/assets/error.mp3")
+				const err_audio = new Audio("xp/assets/error.mp3")
 				err_audio.play()
 				const app_name = "Local Disk (C:)"
-				runApp(app_name, "a/assets/error.png", <NoDiskSpaceError onClose={_=>
+				runApp(app_name, "xp/assets/error.png", <NoDiskSpaceError onClose={_=>
 					setApps(prev => prev.filter(app => app.name !== app_name)
 				)}/>, true)
 			}, 5000)
@@ -91,7 +91,7 @@ const App = () => {
 	}, [])
 	const onShutDown = _=>{
 		setShowShutDown(true)
-		const audio = new Audio("a/assets/shutdown.mp3")
+		const audio = new Audio("xp/assets/shutdown.mp3")
 		audio.play()
 		setTimeout(() => {
 			setShowShutDownImg(false)
@@ -105,15 +105,15 @@ const App = () => {
 		<div className="w-dvw h-dvh overflow-hidden bg-black" onClick={clickHandler}>
 			{showShutDown ? (
 				<img className={`w-dvw h-dvh fixed inset-0 object-cover z-50 select-none ${showShutDownImg ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}
-					src="a/assets/windows-xp-screen.jpg" draggable={false}
+					src="xp/assets/windows-xp-screen.jpg" draggable={false}
 				/>
 			) : (
 			<React.Fragment>
 				<img className={`select-none w-full h-full object-cover ${showWall ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000`}
-					src="a/assets/wall.jpg" draggable={false}
+					src="xp/assets/wall.jpg" draggable={false}
 				/>
 				<img className={`select-none absolute bottom-14 right-4 h-10 w-10 ${showWall ? 'opacity-100' : 'opacity-0'} delay-1000`}
-					src="a/assets/trash.png" draggable={false}
+					src="xp/assets/trash.png" draggable={false}
 				/>
 				{showStartMenu && (
 					<StartMenu
@@ -150,7 +150,7 @@ const NoDiskSpaceError = ({onClose}) => {
 	return (
 		<div className="flex flex-col items-center p-3 gap-3">
 			<div className="flex gap-3 items-center w-max">
-				<img className="select-none h-6" src="a/assets/error.png" draggable={false}/>
+				<img className="select-none h-6" src="xp/assets/error.png" draggable={false}/>
 				<div className="flex flex-col">
 					<span>No more disk space.</span>
 					<span>Delete Windows?</span>

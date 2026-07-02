@@ -140,11 +140,11 @@ const Window = ({name, icon, minimized, setMinimized, close, children, is_error,
 				<div className="h-full py-2 flex gap-1">
 					{!is_error && (
 						<React.Fragment>
-							<WindowButton src="a/assets/hide.png" onClick={_=>setMinimized(true)}/>
-							<WindowButton src="a/assets/fullscreen.png" onClick={toggleFullscreen}/>
+							<WindowButton src="xp/assets/hide.png" onClick={_=>setMinimized(true)}/>
+							<WindowButton src="xp/assets/fullscreen.png" onClick={toggleFullscreen}/>
 						</React.Fragment>
 					)}
-					<WindowButton src="a/assets/close.png" onClick={close}/>
+					<WindowButton src="xp/assets/close.png" onClick={close}/>
 				</div>
 			</div>
 			<div className="bg-white text-gray-800 overflow-auto"
