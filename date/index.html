@@ -27,7 +27,6 @@ button {
 	color: white;
 	border: none;
 	border-radius: 12px;
-	cursor: pointer;
 	background: linear-gradient(45deg, #1cb0f6, #039be5, #5468ff);
 	background-size: 200% 200%;
 	transition: all 0.3s ease;
@@ -35,12 +34,15 @@ button {
 	user-select: none;
 	font-weight: bold;
 }
-button:hover {
+button.active {
+	cursor: pointer;
+}
+button.active:hover {
 	background-position: right center;
 	transform: translateY(-3px) scale(1.03);
 	box-shadow: 0 12px 30px rgba(0,0,0,0.4);
 }
-button:active {
+button.active:active {
 	transform: scale(0.97);
 	box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
@@ -60,7 +62,7 @@ img {
 	<h2 id="mainText">Will you go out with me?</h2>
 	<img src="waiting.gif" height="200px" id="mainImg" draggable="false">
 	<div class="buttons-area">
-		<button id="yes">Yes</button>
+		<button id="yes" class="active">Yes</button>
 		<button id="no">No</button>
 	</div>
 
